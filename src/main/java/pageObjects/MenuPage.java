@@ -19,6 +19,7 @@ public class MenuPage {
 	 */
 	public By loginLink = By.linkText("Login");
 	public By contactsLink = By.linkText("CONTACTS");
+	public By shopLink = By.linkText("BOOKS");
 	
 	// WebElement loginButton = driver.findElement(By.linkText("Login")); //nu e refolosibila 
 	
