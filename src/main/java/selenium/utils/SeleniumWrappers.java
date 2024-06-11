@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -35,6 +36,12 @@ public class SeleniumWrappers extends BaseTest{
 			
 			driver.findElement(locator).sendKeys(text);
 			
+		}
+		
+		public void highlightElement(WebElement element) {
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("arguments[0].setAttribute('style', 'background:yellow ;border:10px solid green')", 
+					element);
 		}
 		
 }

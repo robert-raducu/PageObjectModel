@@ -1,13 +1,38 @@
 package tests;
 
-import org.testng.annotations.Test;
-
 import selenium.utils.BaseTest;
 
-public class DropdownTest extends BaseTest{
+import static org.testng.Assert.assertEquals;
 
-	@Test(priority = 1)
+import org.testng.annotations.*;
+
+public class DropdownTest extends BaseTest{
+	
+	
+	@Test(priority=1)
 	public void selectByValueTest() {
 		
+		app.click(app.menu.shopLink);
+		app.shop.selectByValue("date");
+		assertEquals(app.shop.getSelectedOption(), "Sort by latest");
 	}
+	
+	
+	@Test(priority=2)
+	public void selectByVisibleTextTest() {
+		
+		app.click(app.menu.shopLink);
+		app.shop.selectByVisbileText("Sort by popularity");
+		assertEquals(app.shop.getSelectedOption(), "Sort by popularity");
+	}
+	
+	@Test(priority=3)
+	public void selectByIndexTest() {
+		
+		app.click(app.menu.shopLink);
+		app.shop.selectByIndex(5);
+		assertEquals(app.shop.getSelectedOption(), "Sort by price: high to low");
+	}
+
+
 }
