@@ -18,6 +18,8 @@ public class ShopPage extends SeleniumWrappers{
 	
 	
 	public By sortingList = By.name("orderby");
+	public By filterSliderInitialPosition = By.cssSelector("span[style='left: 0%;']");
+	public By filterSliderFinalPosition = By.cssSelector("span[style='left: 100%;']");
 	
 	
 	public void selectByValue(String value) {
