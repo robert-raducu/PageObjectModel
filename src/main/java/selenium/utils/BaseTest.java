@@ -12,7 +12,7 @@ public class BaseTest {
 	public static WebDriver driver;
 	public BasePage app;
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void setup() {
 		// TestNG e ft similara cu JUnit
 		// Ne ofera functionalitati suplimentare (TestNG)
@@ -27,7 +27,7 @@ public class BaseTest {
 	}
 	
 	
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(5000); // bad practice, ar trebui sa apuc si eu sa vad ceva 
 		//driver.close(); //inchide tabul curent

@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 public class DropdownTest extends BaseTest{
 	
 	
-	@Test(priority=1)
+	@Test(priority=1, groups = "ShopFunctionality")
 	public void selectByValueTest() {
 		
 		app.click(app.menu.shopLink);
@@ -18,7 +18,7 @@ public class DropdownTest extends BaseTest{
 	}
 	
 	
-	@Test(priority=2)
+	@Test(priority=2, groups = "ShopFunctionality")
 	public void selectByVisibleTextTest() {
 		
 		app.click(app.menu.shopLink);
@@ -26,7 +26,7 @@ public class DropdownTest extends BaseTest{
 		assertEquals(app.shop.getSelectedOption(), "Sort by popularity");
 	}
 	
-	@Test(priority=3)
+	@Test(priority=3, groups = "ShopFunctionality")
 	public void selectByIndexTest() {
 		
 		app.click(app.menu.shopLink);

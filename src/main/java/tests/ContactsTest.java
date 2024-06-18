@@ -6,7 +6,7 @@ import selenium.utils.BaseTest;
 
 public class ContactsTest extends BaseTest {
 
-	@Test
+	@Test(groups = "UserManagementFunctionality")
 	public void sendMessageFromContactFormTest() {
 	
 		app.click(app.menu.contactsLink);
